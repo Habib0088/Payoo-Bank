@@ -12,8 +12,8 @@
       <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
 </head>
-<body>
-    <section class=" max-w-[450px]  mx-auto">
+<body class="bg-[#f4f5f7]">
+    <section class=" max-w-[450px]  mx-auto bg-[white]">
         <div class="heading flex items-center justify-between p-6 border-b-1 border-black/20">
             
             <!-- left side -->
@@ -33,14 +33,14 @@
 
     </section>
 
-    <section class="banner-section max-w-[450px]  mx-auto mt-4">
+    <section class="banner-section max-w-[450px]  mx-auto pt-4 px-[10px] bg-[white]">
         <!-- banner section -->
          <h2 class="font-bold">🔥 Welcome to Payooo!</h2>
          <p class="text-[#08080880] text-[14px] mt-2">Enjoy easy and convenient financial services with us. Cashout charge is low and </p>
     </section>
     <!--  Card section -->
 
-   <section class="card-section max-w-[450px]  mx-auto mt-4 ">
+   <section class="card-section max-w-[450px]  mx-auto pt-4 px-[10px] bg-[white] rounded-b-xl">
     
     <div class="card-container grid grid-cols-3 gap-4">
         <div class="card flex flex-col items-center justify-center h-[100px] px-2 border-1 border-black/15">
@@ -69,6 +69,48 @@
         </div>
     </div>
     
+   </section>
+
+   <!-- Changeable section -->
+
+   <section class="form-section h-[500px] max-w-[450px]  mx-auto pt-4 px-[10px]">
+    <div class="add-money">
+    <h3>Add Money</h3>
+    
+    <form class="bg-white p-[20px] mt-5 rounded-xl" >
+        <label class="mt-5" >Select A Bank</label>
+        <br>
+        <!-- select ui -->
+         <select class="select  mt-5 w-full bg-[#f4f5f7] rounded-3xl">
+  <option disabled selected>Choose Bank</option>
+        <option>AB Bank</option>
+        <option>IFIC Bank</option>
+        <option>DBBL</option>
+</select>
+
+
+<!--  other -->
+   <div class="second mt-[10px]">
+    <label >Bank Account Number</label>
+            <br>
+            <input type="text" placeholder="Enter 11 digit account number" class="input bg-[#f4f5f7] mt-4 rounded-3xl w-full" id="mobile px-4"/>
+
+   </div>
+   <div class="second mt-[10px]">
+    <label >Amount to add</label>
+            <br>
+            <input type="text" placeholder="Add account to widrow" class="input bg-[#f4f5f7] mt-4 rounded-3xl w-full" id="mobile px-4"/>
+
+   </div>
+   <div class="second mt-[10px]">
+    <label >Pin Number</label>
+            <br>
+            <input type="text" placeholder="Enter 4 digit pin number" class="input bg-[#f4f5f7] mt-4 rounded-3xl w-full" id="mobile px-4"/>
+
+   </div>
+
+    </form>
+   </div>
    </section>
     
 </body>
