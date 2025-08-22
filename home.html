@@ -4,8 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!-- Fontawesome cdn -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+     <!-- DaisyUI cdn -->
+       <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+           <!-- Tailwind cdn -->
+      <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
 </head>
 <body>
-    <h1>This is Home Page</h1>
+    <div class="section max-w-[450px]  mx-auto">
+        <div class="heading flex items-center justify-between p-6 border-b-1 border-black/20">
+            <!-- left side -->
+            <div class="heading-left flex gap-2">
+                <img src="./assets/Group.png" alt="" class="h-[50px]">
+                <div class="money">
+                  <h2>$<span>4500</span></h2>  
+                  <p class="text-[#08080880]">Available Balance</p>
+                </div>
+            </div>
+            <!-- Right side -->
+             <div class="heading-right">
+                  <button class="btn btn-neutral btn-outline text-[#08080880]"><i class="fa-solid fa-arrow-right-from-bracket rotate-180"></i>Log Out</button>
+             </div>
+        </div>
+    </div>
 </body>
 </html>
