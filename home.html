@@ -43,11 +43,11 @@
    <section class="card-section max-w-[450px]  mx-auto pt-4 px-[10px] bg-[white] rounded-b-xl">
     
     <div class="card-container grid grid-cols-3 gap-4">
-        <div class="card flex flex-col items-center justify-center h-[100px] px-2 border-1 border-black/15">
+        <div class="card flex flex-col items-center justify-center h-[100px] px-2 border-1 border-black/15" id="add-money">
            <img src="./assets/wallet1.png" class="h-[35px] w-[30px] mb-3" alt="">
             <p>Add Money</p>
         </div>
-        <div class="card flex flex-col items-center justify-center h-[100px] px-2 border-1 border-black/15">
+        <div class="card flex flex-col items-center justify-center h-[100px] px-2 border-1 border-black/15" id="cash-out">
            <img src="./assets/send1.png" class="h-[35px] w-[30px] mb-3" alt="">
             <p>Cashout</p>
         </div>
@@ -74,8 +74,13 @@
    <!-- Changeable section -->
 
    <section class="form-section h-[500px] max-w-[450px]  mx-auto pt-4 px-[10px]">
-    <div class="add-money">
-    <h3>Add Money</h3>
+                              
+    
+                            <!-- Add Money Area -->
+
+
+  <div id="add-money-toogle" style="display: block;">
+    <h3 id="add-heading">Add Money</h3>
     
     <form class="bg-white p-[20px] mt-5 rounded-xl" id="form">
         <label class="mt-5" >Select A Bank</label>
@@ -112,6 +117,41 @@
 
     </form>
    </div>
+
+                                                <!-- Cash Out Area -->
+
+       <div id="cash-out-toogle" style="display: none;" >
+                <h3>Cashout</h3>
+                
+                <form class="bg-white p-[20px] mt-5 rounded-xl" id="form">
+            
+
+
+            <!--  other -->
+            <div class="second mt-[10px]" >
+                <label >Agent Number</label>
+                        <br>
+                        <input type="text" placeholder="Enter 11 digit account number" class="input bg-[#f4f5f7] mt-4 rounded-3xl w-full" id="bank-account-number" />
+
+            </div>
+            <div class="second mt-[10px]" >
+                <label >Amount </label>
+                        <br>
+                        <input type="text" placeholder="Enter Amount to widrow" class="input bg-[#f4f5f7] mt-4 rounded-3xl w-full mobile px-4" id="ammout-to-add" />
+
+            </div>
+            <div class="second mt-[10px]">
+                <label >Pin Number</label>
+                        <br>
+                        <input type="text" placeholder="Enter 4 digit pin number" class="input bg-[#f4f5f7] mt-4 rounded-3xl w-full" id="pin-number"/>
+
+                <button class="btn btn-primary mt-4 w-full rounded-3xl" id="btn-addmoney">Add Money</button>
+            </div>
+
+                </form>
+   </div>
+
+
    </section>
     
    <script src="./javaScript/home.js"></script>

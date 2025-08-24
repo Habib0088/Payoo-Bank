@@ -32,3 +32,20 @@ document.getElementById('btn-addmoney').addEventListener('click', function(e){
     
        document.getElementById('form').reset();
 }) 
+
+
+// Transaction area Toogle
+
+// add money
+
+document.getElementById('add-money').addEventListener('click', function(){
+    document.getElementById('cash-out-toogle').style.display='none';
+    document.getElementById('add-money-toogle').style.display='block';
+})
+
+// CashOut 
+
+document.getElementById('cash-out').addEventListener('click', function(){
+    document.getElementById('add-money-toogle').style.display='none';
+    document.getElementById('cash-out-toogle').style.display='block'
+})
