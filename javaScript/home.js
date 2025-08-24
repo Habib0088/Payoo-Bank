@@ -1,3 +1,7 @@
+    const defaulPin=11111;
+
+ 
+
 document.getElementById('btn-addmoney').addEventListener('click', function(e){
     e.preventDefault();
     
@@ -9,10 +13,22 @@ document.getElementById('btn-addmoney').addEventListener('click', function(e){
 
     let availableBalance=parseInt(document.getElementById('available-balance').innerText);
 
-    let total=ammoutToAdd + availableBalance;
-    console.log(total);
-    
+    let pinNumber=parseInt(document.getElementById('pin-number').value)
 
+
+    if(bankAccountNumber.length !==11){
+        alert("Invalid Bank Account");
+        return ;
+    }
+
+    if(pinNumber !== defaulPin){
+        alert('Wrong Pin You have Provided');
+        return;
+    }
+
+
+    let total=ammoutToAdd + availableBalance;
     document.getElementById('available-balance').innerText=total
     
+       document.getElementById('form').reset();
 }) 
