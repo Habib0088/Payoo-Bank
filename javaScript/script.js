@@ -12,7 +12,7 @@ document.getElementById('btn-login').addEventListener('click', function(e){
     let passwordInputInt=parseInt(passwordInput);
 
     if(defaultMobile=== mobileInputInt && defaultPassword === passwordInputInt){
-       window.location.href='../home.html';
+       window.location.href='./../home.html';
        
     }
     else{
