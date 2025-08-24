@@ -1,19 +1,39 @@
-    const defaulPin=11111;
+//    Resuable function   { value int make }
+
+function makeValueInt(id){
+    let value=parseInt(document.getElementById(id).value);
+    return value;
+}
+   
+//    Resuable function   { only take value from input }
+
+function takeValue(id){
+    let inputValue= document.getElementById(id).value.trim();
+    return inputValue;
+}
+//  Resuable function { set innertext }
+
+function innerText(value){
+    let valueSet=document.getElementById('available-balance');
+    valueSet.innerText=value;
+}
+
+   const defaulPin=11111;
 
  
+    //  Add Money  functionality
 
 document.getElementById('btn-addmoney').addEventListener('click', function(e){
     e.preventDefault();
     
     let selectBank=document.getElementById('select-bank').value;
 
-    let bankAccountNumber=document.getElementById('bank-account-number').value;
-    
-    let ammoutToAdd=parseInt(document.getElementById('ammout-to-add').value);
+                     let bankAccountNumber= takeValue('bank-account-number')   
+                    let ammoutToAdd= makeValueInt('ammout-to-add');
 
     let availableBalance=parseInt(document.getElementById('available-balance').innerText);
 
-    let pinNumber=parseInt(document.getElementById('pin-number').value)
+                    let pinNumber= makeValueInt('pin-number');
 
 
     if(bankAccountNumber.length !==11){
@@ -28,7 +48,7 @@ document.getElementById('btn-addmoney').addEventListener('click', function(e){
 
 
     let total=ammoutToAdd + availableBalance;
-    document.getElementById('available-balance').innerText=total
+                        innerText(total);
     
        document.getElementById('form').reset();
 }) 
@@ -40,15 +60,15 @@ document.getElementById('btn-addmoney').addEventListener('click', function(e){
 document.getElementById('cashout-btn').addEventListener('click', function(e){
     e.preventDefault();
 
-    let casoutAmout=parseInt(document.getElementById('cashout-amount').value);
+                          let casoutAmout=makeValueInt('cashout-amount');
 
     let availableBalance=parseInt(document.getElementById('available-balance').innerText);
 
                 // If condition Area
 
     let defaulPin=11111;
-    let agentNumber=document.getElementById('agent-number').value.trim();
-    let pin=parseInt(document.getElementById('cashout-pin-number').value);
+                            let agentNumber= takeValue('agent-number')
+                            let pin= makeValueInt('cashout-pin-number')
     if(agentNumber.length !== 11){
         alert('Not a valid Agent Number');
         return;
@@ -68,7 +88,7 @@ document.getElementById('cashout-btn').addEventListener('click', function(e){
         
     }
 
-    document.getElementById('available-balance').innerText=availableBalance;
+    innerText(availableBalance);
 
   
     document.getElementById('cash-form').reset();
