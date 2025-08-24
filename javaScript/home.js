@@ -34,6 +34,36 @@ document.getElementById('btn-addmoney').addEventListener('click', function(e){
 }) 
 
 
+
+//  Cash out functionality
+
+document.getElementById('cashout-btn').addEventListener('click', function(e){
+    e.preventDefault();
+
+    let casoutAmout=parseInt(document.getElementById('cashout-amount').value);
+
+    let availableBalance=parseInt(document.getElementById('available-balance').innerText);
+
+                // If condition Area
+
+    let defaulPin=11111;
+    let agentNumber=document.getElementById('agent-number').value.trim();
+    let pin=parseInt(document.getElementById('cashout-pin-number').value);
+    if(agentNumber.length !== 11){
+        alert('Not a valid Agent Number');
+        return;
+    }
+    if( pin !== defaulPin){
+        alert('Not a valid Agent Number');
+        return;
+    }
+
+    availableBalance=availableBalance-casoutAmout;
+
+    document.getElementById('available-balance').innerText=availableBalance;
+
+    document.getElementById('cash-form').reset();
+})
 // Transaction area Toogle
 
 // add money
