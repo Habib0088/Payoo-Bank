@@ -20,7 +20,7 @@
             <div class="heading-left flex gap-2">
                 <img src="./assets/Group.png" alt="" class="h-[50px]">
                 <div class="money">
-                  <h2>$<span>4500</span></h2>  
+                  <h2>$<span id="available-balance">4500</span></h2>  
                   <p class="text-[#08080880]">Available Balance</p>
                 </div>
             </div>
@@ -82,7 +82,7 @@
         <br>
         <!-- select ui -->
          <select class="select  mt-5 w-full bg-[#f4f5f7] rounded-3xl">
-  <option disabled selected>Choose Bank</option>
+  <option disabled selected id="select-bank">Choose Bank</option>
         <option>AB Bank</option>
         <option>IFIC Bank</option>
         <option>DBBL</option>
@@ -90,16 +90,16 @@
 
 
 <!--  other -->
-   <div class="second mt-[10px]">
+   <div class="second mt-[10px]" >
     <label >Bank Account Number</label>
             <br>
-            <input type="text" placeholder="Enter 11 digit account number" class="input bg-[#f4f5f7] mt-4 rounded-3xl w-full" id="mobile px-4"/>
+            <input type="text" placeholder="Enter 11 digit account number" class="input bg-[#f4f5f7] mt-4 rounded-3xl w-full" id="bank-account-number" />
 
    </div>
-   <div class="second mt-[10px]">
+   <div class="second mt-[10px]" >
     <label >Amount to add</label>
             <br>
-            <input type="text" placeholder="Add account to widrow" class="input bg-[#f4f5f7] mt-4 rounded-3xl w-full" id="mobile px-4"/>
+            <input type="text" placeholder="Add account to widrow" class="input bg-[#f4f5f7] mt-4 rounded-3xl w-full mobile px-4" id="ammout-to-add" />
 
    </div>
    <div class="second mt-[10px]">
@@ -107,11 +107,13 @@
             <br>
             <input type="text" placeholder="Enter 4 digit pin number" class="input bg-[#f4f5f7] mt-4 rounded-3xl w-full" id="mobile px-4"/>
 
+     <button class="btn btn-primary mt-4 w-full rounded-3xl" id="btn-addmoney">Add Money</button>
    </div>
 
     </form>
    </div>
    </section>
     
+   <script src="./javaScript/home.js"></script>
 </body>
 </html>
