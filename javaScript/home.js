@@ -60,8 +60,17 @@ document.getElementById('cashout-btn').addEventListener('click', function(e){
 
     availableBalance=availableBalance-casoutAmout;
 
+        // Insufficient Balance validation
+      if(casoutAmout > availableBalance){
+        alert("Insufficient Balance");
+        document.getElementById('cash-form').reset();
+        return;
+        
+    }
+
     document.getElementById('available-balance').innerText=availableBalance;
 
+  
     document.getElementById('cash-form').reset();
 })
 // Transaction area Toogle
