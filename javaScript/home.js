@@ -95,16 +95,71 @@ document.getElementById('cashout-btn').addEventListener('click', function(e){
 })
 // Transaction area Toogle
 
+// function toggle area new practise
+function toggleFunction(button , area){
+    document.getElementById(button).addEventListener('click', function(){
+
+    let forms=document.getElementsByClassName('common');
+   
+    
+    for(const form of forms){
+        form.style.display='none';   
+    }
+
+    let addMoneyArea=document.getElementById(area);
+    addMoneyArea.style.display='block';
+})
+}
+
+
+// add money with function
+
+toggleFunction('add-money', 'add-money-toogle' )
+
+// cashout with function 
+
+
+toggleFunction('cash-out', 'cash-out-toogle')
+
 // add money
 
-document.getElementById('add-money').addEventListener('click', function(){
-    document.getElementById('cash-out-toogle').style.display='none';
-    document.getElementById('add-money-toogle').style.display='block';
-})
 
-// CashOut 
+// document.getElementById('add-money').addEventListener('click', function(){
 
-document.getElementById('cash-out').addEventListener('click', function(){
-    document.getElementById('add-money-toogle').style.display='none';
-    document.getElementById('cash-out-toogle').style.display='block'
-})
+//     let forms=document.getElementsByClassName('common');
+   
+    
+//     for(const form of forms){
+//         form.style.display='none';   
+//     }
+
+//     let addMoneyArea=document.getElementById('add-money-toogle');
+//     addMoneyArea.style.display='block';
+// })
+
+// Cashout
+// document.getElementById('cash-out').addEventListener('click', function(){
+
+//     let forms=document.getElementsByClassName('common');
+   
+    
+//     for(const form of forms){
+//         form.style.display='none';   
+//     }
+
+    
+//     let addMoneyArea=document.getElementById('cash-out-toogle');
+//     addMoneyArea.style.display='block';
+// })
+
+// document.getElementById('add-money').addEventListener('click', function(){
+//     document.getElementById('cash-out-toogle').style.display='none';
+//     document.getElementById('add-money-toogle').style.display='block';
+// })
+
+// // CashOut 
+
+// document.getElementById('cash-out').addEventListener('click', function(){
+//     document.getElementById('add-money-toogle').style.display='none';
+//     document.getElementById('cash-out-toogle').style.display='block'
+// })
